@@ -91,13 +91,3 @@ Jul 26 11:40:01 raspberrypi CRON[3000]: (pi) CMD (python3 /home/pi/temperature/t
 Jul 26 11:45:01 raspberrypi CRON[3062]: (pi) CMD (python3 /home/pi/temperature/temp2.py >/dev/null 2>&1)
 Jul 26 11:50:01 raspberrypi CRON[3159]: (pi) CMD (python3 /home/pi/temperature/temp2.py >/dev/null 2>&1)
 Jul 26 11:55:01 raspberrypi CRON[3214]: (pi) CMD (python3 /home/pi/temperature/temp2.py >/dev/null 2>&1)
-
-
-
-P.S. Lifehack
-Desperate to make your raspeberry pi update time from NTP server after booting?
-It is possible to fix that with cron as well. The command I use is
-	@reboot sleep 13s; sudo /etc/init.d/ntp restart
-
-Sleep is needed for time to be taken *after* connecting to internet. It is required to type a password after executing command with sudo, you can fix that with
-	sudo visudo
