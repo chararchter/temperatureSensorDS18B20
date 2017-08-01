@@ -41,7 +41,7 @@ To see if it worked out, change directory (cd) /sys/bus/w1/devices. list directo
 
 What makes this programm different is it automatically writes temperature measurements in text file. 
 
-You also might have noticed both temp.py and temp2.py in this repository. temp.py contains endless while True loop, thus making it useful for continuous measurements. However, temp2.py runs only once after each execution, therefore it can be used with cron. 
+You also might have noticed both temp.py and temp2.py in this repository. **temp.py** contains endless *while True* loop, thus making it useful for continuous measurements. However, **temp2.py** runs only once after each execution, therefore it can be used with *cron*. 
 
 
 #### Install dependencies
@@ -83,7 +83,7 @@ Here it is used as
 
 ```
 */5 * * * * python3 /home/pi/temperature/temp2.py >/dev/null 2>&1
-every 5 minutes	| command 						| disable email notification
+every 5 minutes	|   execute temp2.py   | disable email notification
 ```
 
 To observe cron working:
