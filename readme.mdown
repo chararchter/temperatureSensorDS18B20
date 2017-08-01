@@ -76,8 +76,8 @@ Edit cron jobs
 ```
 	crontab -e
 ```
-Basic format for a crontab is minute hour day_of_month month day_of_week command.
-[Use this for human readable form](https://crontab.guru/) for the sake of testing.
+Basic format for a crontab is ` minute hour day_of_month month day_of_week command `.
+[This converts crontab to human readable form](https://crontab.guru/) for the sake of testing if it is set to exactly what one expects.
 
 Here it is used as
 
