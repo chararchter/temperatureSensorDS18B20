@@ -1,9 +1,9 @@
-						# Temperature sensor project
-				### Connecting the DS18B20 to the Raspberry Pi
+# Temperature sensor project
+### Connecting the DS18B20 to the Raspberry Pi
 
 The code used here is largely based on [DS18B20 Temperature Sensing by Simon Monk](https://cdn-learn.adafruit.com/downloads/pdf/adafruits-raspberry-pi-lesson-11-ds18b20-temperature-sensing.pdf).
 
-	####	Hardware
+#### Hardware
 
 	3V3 - Red wire
 	Ground - Black wire
@@ -16,20 +16,21 @@ Raspberry Pi 2 pinout diagram can be seen here:
 [picture with our sensor to be included] 
 
 
-	####	Software
+#### Software
 
 Edit /boot/config.txt and add the configuration line dtoverlay=w1-gpio, then reboot the Raspberry Pi.
-`
-	sudo nano /boot/config.txt
-`
+
+``` sudo nano /boot/config.txt
+```
+
 	\*add dtoverlay=w1-gpio and save\*
-`
-	sudo reboot
-`
+
+```	sudo reboot
+```
+
 To see if it worked out, change directory (cd) /sys/bus/w1/devices. list directory contents (ls), and you should see a 28-xxxxxxx directory, one directory for each connected sensor. cd into that directory, then concatenate (cat) w1_slave.
 
-```
-	sudo modprobe w1-gpio
+```	sudo modprobe w1-gpio
 	sudo modprobe w1-therm
 	cd /sys/bus/w1/devices
 	ls
@@ -38,7 +39,7 @@ To see if it worked out, change directory (cd) /sys/bus/w1/devices. list directo
 ```
 
 
-			### Modifications 
+### Modifications 
 
 
 What makes this programm different is it automatically writes temperature measurements in text file. 
@@ -46,7 +47,7 @@ What makes this programm different is it automatically writes temperature measur
 You also might have noticed both temp.py and temp2.py in this repository. temp.py contains endless while True loop, thus making it useful for continuous measurements. However, temp2.py runs only once after each execution, therefore it can be used with cron. 
 
 
-	####	Install dependencies
+#### Install dependencies
 
 To see, which dependencies are required, check __init__ file.
 
@@ -63,7 +64,7 @@ To install, for example, ntplib package:
 	pip3 install ntplib
 ```
 
-		###	Cron
+### Cron
 
 In case you want to only execute the python programm at specific times. 
 
