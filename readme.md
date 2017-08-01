@@ -1,5 +1,5 @@
-					#	Temperature sensor project
-			###	Connecting the DS18B20 to the Raspberry Pi
+						# Temperature sensor project
+				### Connecting the DS18B20 to the Raspberry Pi
 
 The code used here is largely based on [DS18B20 Temperature Sensing by Simon Monk](https://cdn-learn.adafruit.com/downloads/pdf/adafruits-raspberry-pi-lesson-11-ds18b20-temperature-sensing.pdf).
 
