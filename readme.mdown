@@ -6,11 +6,11 @@ The code used here is largely based on [DS18B20 Temperature Sensing by Simon Mon
 
 #### Hardware
 
-	3V3 - Red wire
-	Ground - Black wire
-	GPIO 4 - White wire (with 4.7K resistor between this and 3V3).
+3V3 - Red wire
+Ground - Black wire
+GPIO 4 - White wire (with 4.7K resistor between this and 3V3).
 
-The 3V3, Ground, GPIO wire can be connected to any 3.3V, Ground, GPIO pin accordingly.[Raspberry Pi pinout diagrams can be found here](http://www.raspberrypi-spy.co.uk/2012/06/simple-guide-to-the-rpi-gpio-header-and-pins/)
+The 3V3, Ground, GPIO wire can be connected to any 3.3V, Ground, GPIO pin accordingly. [Raspberry Pi pinout diagrams can be found here](http://www.raspberrypi-spy.co.uk/2012/06/simple-guide-to-the-rpi-gpio-header-and-pins/)
 
 [picture with our sensor to be included] 
 
@@ -21,11 +21,7 @@ Edit /boot/config.txt and add the configuration line dtoverlay=w1-gpio, then reb
 
 ``` 
 	sudo nano /boot/config.txt
-```
-
-	\*add dtoverlay=w1-gpio and save\*
-
-```	
+	*add dtoverlay=w1-gpio and save*
 	sudo reboot
 ```
 
@@ -81,23 +77,20 @@ Edit cron jobs
 	crontab -e
 ```
 Basic format for a crontab is minute hour day_of_month month day_of_week command.
-[Use this for human readable form,](https://crontab.guru/) for the sake of testing.
+[Use this for human readable form](https://crontab.guru/) for the sake of testing.
 
 Here it is used as
-	*/5 * * * * python3 /home/pi/temperature/temp2.py >/dev/null 2>&1
 
-	every 5 minutes	| command 						| disable email notification
+*/5 * * * * python3 /home/pi/temperature/temp2.py >/dev/null 2>&1
+every 5 minutes	| command 						| disable email notification
 
-Use this to see, how cron works
+To observe cron working:
 ```
 	tail -f /var/sys/syslog
 ```
 
 Example of the output received:
 Jul 26 11:40:01 raspberrypi CRON[3000]: (pi) CMD (python3 /home/pi/temperature/temp2.py >/dev/null 2>&1)
-
 Jul 26 11:45:01 raspberrypi CRON[3062]: (pi) CMD (python3 /home/pi/temperature/temp2.py >/dev/null 2>&1)
-
 Jul 26 11:50:01 raspberrypi CRON[3159]: (pi) CMD (python3 /home/pi/temperature/temp2.py >/dev/null 2>&1)
-
 Jul 26 11:55:01 raspberrypi CRON[3214]: (pi) CMD (python3 /home/pi/temperature/temp2.py >/dev/null 2>&1)
