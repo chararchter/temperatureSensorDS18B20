@@ -11,10 +11,10 @@ serial=list()
 
 #get file path and make new folder for measurements
 filepath=os.getcwd()
-newpath = filepath+"/measurements/" 
+newpath = filepath+"/measurements/"
+print(newpath)
 if not os.path.exists(newpath):
     os.makedirs(newpath)
-
 
 # test temperature sensors
 x = DS18B20()

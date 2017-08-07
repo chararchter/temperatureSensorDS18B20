@@ -9,11 +9,13 @@ dev=list()
 ID=list()
 
 #get file path and make new folder for measurements
-filepath=os.getcwd()
+filepath=os.path.abspath("/home/pi/temperatureSensorDS18B20/")
+
+#filepath=os.getcwd()
 newpath = filepath+"/measurements/" 
 if not os.path.exists(newpath):
     os.makedirs(newpath)
-
+print(newpath)
 # test temperature sensors
 x = DS18B20()
 count=x.device_count()
