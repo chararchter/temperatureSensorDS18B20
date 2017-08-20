@@ -12,7 +12,8 @@ The code used here is largely based on [DS18B20 Temperature Sensing by Simon Mon
 
 The 3V3, Ground, GPIO wire can be connected to any 3.3V, Ground, GPIO pin accordingly. [Raspberry Pi pinout diagrams can be found here](http://www.raspberrypi-spy.co.uk/2012/06/simple-guide-to-the-rpi-gpio-header-and-pins/)
 
-[picture with our sensor to be included] 
+Soldered example of our sensor:
+![Alt text](https://github.com/chararchter/temperatureSensorDS18B20/blob/master/raspberry_pi.jpg "Soldered example of our sensor")
 
 
 #### Software
