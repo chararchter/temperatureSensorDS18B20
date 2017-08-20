@@ -82,7 +82,7 @@ Basic format for a crontab is ` minute hour day_of_month month day_of_week comma
 Here it is used as
 
 ```
-*/5 * * * * python3 /home/pi/temperature/temp2.py >/dev/null 2>&1
+*/5 * * * * python3 /home/pi/tempSensorDS18B20/temp2.py >/dev/null 2>&1
 every 5 minutes	|   execute temp2.py   | disable email notification
 ```
 
@@ -93,8 +93,8 @@ To observe cron working:
 
 Example of the output received:
 ```
-Jul 26 11:40:01 raspberrypi CRON[3000]: (pi) CMD (python3 /home/pi/temperature/temp2.py >/dev/null 2>&1)
-Jul 26 11:45:01 raspberrypi CRON[3062]: (pi) CMD (python3 /home/pi/temperature/temp2.py >/dev/null 2>&1)
-Jul 26 11:50:01 raspberrypi CRON[3159]: (pi) CMD (python3 /home/pi/temperature/temp2.py >/dev/null 2>&1)
-Jul 26 11:55:01 raspberrypi CRON[3214]: (pi) CMD (python3 /home/pi/temperature/temp2.py >/dev/null 2>&1)
+Jul 26 11:40:01 raspberrypi CRON[3000]: (pi) CMD (python3 /home/pi/tempSensorDS18B20/temp2.py >/dev/null 2>&1)
+Jul 26 11:45:01 raspberrypi CRON[3062]: (pi) CMD (python3 /home/pi/tempSensorDS18B20/temp2.py >/dev/null 2>&1)
+Jul 26 11:50:01 raspberrypi CRON[3159]: (pi) CMD (python3 /home/pi/tempSensorDS18B20/temp2.py >/dev/null 2>&1)
+Jul 26 11:55:01 raspberrypi CRON[3214]: (pi) CMD (python3 /home/pi/tempSensorDS18B20/temp2.py >/dev/null 2>&1)
 ```
